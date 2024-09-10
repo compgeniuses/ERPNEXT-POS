@@ -9,7 +9,7 @@ The custom POS page comes pre-installed when you install the app, requiring no m
 
 <br>
 
-### Chiffrage Doctype overview :
+### POS PAGE overview :
 | Tab | photo |
 |-----|-------|
 |POS Screen             | ![screen1](https://github.com/user-attachments/assets/dd15895b-ff91-464d-9046-b30c75256b6b)|
