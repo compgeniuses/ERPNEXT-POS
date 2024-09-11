@@ -208,46 +208,41 @@ function renderItemDetailsCart(item){
 	showItemDetails()
 
 	//creation
-	const itemDetailsHeader = document.getElementById("itemDetailsHeader");
-	itemDetailsHeader.innerHTML = "";
-	let image ;
+	const imageContainer    = document.getElementById("detailsItemImage") ;
 
-	const name_price = document.createElement("div");
-	const name  = document.createElement("div");
-	const price = document.createElement("div");
+	const name  = document.getElementById("detailsItemName");
+	const price = document.getElementById("detailsItemPrice");
 
 
-	const c1    = document.getElementById("itemDetails_C1");
-	const c2    = document.getElementById("itemDetails_C2");
+	const quantity  = document.getElementById("itemDetailsQuantityInput");
+	const rate      = document.getElementById("itemDetailsRateInput");
+	const discount  = document.getElementById("itemDetailsDiscountInput");
+	const available = document.getElementById("itemDetailsQuantityInput");
 
 
-	const quantity  = document.createElement("div");
-	const rate      = document.createElement("div");
-	const discount  = document.createElement("div");
-	const available = document.createElement("div");
-
-
-	const uom           = document.createElement("div");
-	const uom_c_f       = document.createElement("div");
-	const warehouse     = document.createElement("div");
-	const priceListRate = document.createElement("div");
+	const uom           = document.getElementById("itemDetailsRateInput");
+	const uom_c_f       = document.getElementById("itemDetailsRateInput");
+	const warehouse     = document.getElementById("itemDetailsDiscountInput");
+	const priceListRate = document.getElementById("itemDetailsAvailableInput");
 
 	//populate
 
 	if(item.image){
-		image = document.createElement("img");
-		image.classList.add("detailsItem_image") ;
+		const image = document.createElement("img");
 		image.src = item.image;
+		imageContainer.innerHTML = "";
+		imageContainer.appendChild(image);
 	}
 	else{
-		image = document.createElement("div");
-		image.classList.add("detailsItem_image" , "rowBox" , "centerItem");
+		const image = document.createElement("div");
 		image.textContent = item.item_name[0];
 		image.style.fontSize = "xx-large";
 		image.style.fontWeight = "700";
+		imageContainer.innerHTML = "";
+		imageContainer.appendChild(image);
 	}
 
-	name.textContent = item.item_name;
+	name.textContent  = item.item_name;
 	price.textContent = getItemPrice(item) + " DA";
 
 
@@ -258,82 +253,33 @@ function renderItemDetailsCart(item){
 	//price
 	price.classList.add("rowBox" , "align_center");
 
-	//name_price div
-	name_price.id = "price_and_name"
-	name_price.classList.add("columnBox");
-	name_price.appendChild(name);
-	name_price.appendChild(price);
 
-
-	itemDetailsHeader.appendChild(image);
-	itemDetailsHeader.appendChild(name_price);
 
 
 	//quantity
-	quantity.id = "DetailsItem_quantity"
-	quantity.classList.add("columnBox")
-	const quantityLabel = document.createElement("label");
-	quantityLabel.innerText = "quantity";
-	const quantityInput = document.createElement("input");
-	quantityInput.type = "Float"
-	quantity.appendChild(quantityLabel);
-	quantity.appendChild(quantityInput);
+	quantity.value = 1.000
 
 	//rate
-	rate.id = "DetailsItem_rate"
-	const rateLabel = document.createElement("label");
-	rate.classList.add("columnBox")
-	rateLabel.innerText = "Rate";
-	const rateInput = document.createElement("input");
-	rateInput.type = "Float"
-	rate.appendChild(rateLabel);
-	rate.appendChild(rateInput);
+	rate.value = 250.00
 
 	//discount
-	discount.id = "DetailsItem_discount"
-	discount.classList.add("columnBox")
-	const discountLabel = document.createElement("label");
-	discountLabel.innerText = "discount";
-	const discountInput = document.createElement("input");
-	discountInput.type = "Float"
-	discount.appendChild(discountLabel);
-	discount.appendChild(discountInput);
+	discount.value = 0.00
 
 	//available
-	available.id = "DetailsItem_available"
-	available.classList.add("columnBox")
-	const availableLabel = document.createElement("label");
-	availableLabel.innerText = "available";
-	const availableInput = document.createElement("input");
-	availableInput.type = "Float"
-	available.appendChild(availableLabel);
-	available.appendChild(availableInput);
+	available.value = 1
 
-	//c1
-	c1.appendChild(quantity);
-	c1.appendChild(rate);
-	c1.appendChild(discount);
-	c1.appendChild(available);
 
 	//uom
-	uom.id = "DetailsItem_uom"
+	uom.value = "Pair"
 
 	//uom_c_f
-	uom_c_f.id = "DetailsItem_uom_c_f"
+	uom_c_f.value = 1
 
 	//warehouse
-	warehouse.id = "DetailsItem_warehouse"
+	warehouse.value = "Stores - Ms"
 
 	//priceListRate
-	priceListRate.id = "DetailsItem_priceListRate"
-
-
-	//c2
-	c2.appendChild(uom);
-	c2.appendChild(uom_c_f);
-	c2.appendChild(warehouse);
-	c2.appendChild(priceListRate);
-
+	priceListRate.value = 250.00 + "DA"
 
 
 

@@ -1,7 +1,14 @@
 /*****************  erpnext page style  **************************/
+
+/*make the body width biger*/
 .container.page-body{
 	width : 95%  ; 
 	max-width : 95%  ; 
+}
+
+/*hide the top bar of the page*/
+.page-head{
+	display : none;
 }
 
 
@@ -123,6 +130,7 @@ input:focus{
 	height    : 100% ;
 	animation : mymove 1s  ;
 	display   : block ;
+	overflow-y    : scroll ; 
 
 	border        : 2px solid #c0c0c0 ;
 	border-radius : 16px;
@@ -151,7 +159,6 @@ input:focus{
 	border-radius : 0px 0px 16px 16px ; 
 
 	flex          : 1      ; 
-	overflow-y    : scroll ;
 }
 
 
@@ -189,6 +196,7 @@ input:focus{
 	animation : mymove 1s ;
 	display   : none ;
 
+	overflow-y    : scroll ; 
 	border        : 2px solid #c0c0c0 ;
 	border-radius : 16px;
 }
@@ -197,12 +205,20 @@ input:focus{
 	padding : 4px 16px 4px 16px ;
 }
 
-#LeftSection #itemDetailsCart #itemDetailsHeader .detailsItem_image{
-	width : 35%;
-	height : auto ;
+#LeftSection #itemDetailsCart #itemDetailsHeader #detailsItemImage{
+	max-width : 100px ;
+	max-height : 100px ;
 	margin : 16px 30px ;
 	background : #f0f0f0;
 	border-radius : 12px ;
+	border : 1.5px solid #e0e0e0;
+
+	overflow : hidden ;
+}
+#LeftSection #itemDetailsCart #itemDetailsHeader #detailsItemImage img{
+	width : 100%;
+	height : 100% ;
+	object-fit : cover ;
 }
 #LeftSection #itemDetailsCart #itemDetailsHeader #price_and_name{
 	width : 65%;
@@ -211,13 +227,48 @@ input:focus{
 }
 
 #LeftSection #itemDetailsCart #itemDetailsHeader #price_and_name div{
-	height : 55px ;
+	height : 35px ;
 	margin : 16px ;
 	padding : 0px 16px ;
 	border-radius : 12px ;
 	background : #f0f0f0 ;
 }
 
+
+#LeftSection #itemDetailsCart #itemDetailsAll{
+	grow       : 1       ;
+
+	justify-content : center ;
+}
+
+#LeftSection #itemDetailsCart #itemDetailsAll #itemDetails_C1{
+	width  : 40% ;
+	height : 100% ;
+
+	margin-right : 8px ;
+
+}
+#LeftSection #itemDetailsCart #itemDetailsAll #itemDetails_C2{
+	width  : 40% ;
+	height : 100% ;
+
+	margin-left : 8px ;
+}
+
+#LeftSection #itemDetailsCart #itemDetailsAll input{
+        
+	height : 35px ;
+	margin-bottom : 16px ;
+	background    : #f0f0f0 ;
+	border        : 2px solid #e0e0e0 ; 
+
+        justify-content : center ;
+}
+
+#LeftSection #itemDetailsCart #itemDetailsAll input:disabled{
+	border : none ;
+	background : #f5f5f5 ;
+}
 /************* right *****************/
 #RightSection #CustomerBox{
 	height : 55px  ;

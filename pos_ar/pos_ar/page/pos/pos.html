@@ -25,10 +25,50 @@
                 <img src="/assets/pos_ar/images/cancel.png" alt="Cancel Button" id="itemDetailsCartXBtn" class="xBtn">
             </div>
             <div id="itemDetailsHeader" class="rowBox">
+                <div id="detailsItemImage" class="rowBox centerItem"></div>
+                <div id="price_and_name" class="columnBox">
+                    <div id="detailsItemName" class="rowBox align_cemter"></div>
+                    <div id="detailsItemPrice" class="rowBox align_cemter"></div>
+                </div>
             </div>
             <div id="itemDetailsAll"  class="rowBox">
-                <div id="itemDetails_C1" class="columnBox"></div>
-                <div id="itemDetails_C2" class="columnBox"></div>
+                <div id="itemDetails_C1" class="columnBox">
+                    <div class="columnBox">
+                        <label for="itemDetailsQuantityInput">Quantity</label>
+                        <input type="float" id="itemDetailsQuantityInput">
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsRateInput">Rate</label>
+                        <input type="float" id="itemDetailsRateInput">
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsDiscountInput">Discount (%)</label>
+                        <input type="float" id="itemDetailsDiscountInput">
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsAvailableInput">Available Qty at Warehouse</label>
+                        <input type="float" id="itemDetailsAvailableInput" disabled>
+                    </div>
+                </div>
+                <div id="itemDetails_C2" class="columnBox">
+                    <div class="columnBox">
+                        <label for="itemDetailsQuantityInput">UOM *</label>
+                        <input type="text" id="itemDetailsQuantityInput">
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsRateInput">UOM Conversion Factor *</label>
+                        <input type="float" id="itemDetailsRateInput" disabled>
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsDiscountInput">Warehouse *</label>
+                        <input type="text" id="itemDetailsDiscountInput">
+                    </div>
+                    <div class="columnBox">
+                        <label for="itemDetailsAvailableInput">Price List Rate</label>
+                        <input type="text" id="itemDetailsAvailableInput" disabled>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
