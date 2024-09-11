@@ -396,23 +396,20 @@ input:focus{
 }
 
 #RightSection #CartBox #cartDetails #discount{
-	height : 30px  ;
+	height : 25px  ;
 	border : 1px dashed #c0c0c0 ;
 	border-radius : 12px  ;
-	margin : 4px 0px ;
 	padding : 0px 16px ;
 }
 #RightSection #CartBox #cartDetails #discount:hover{
 	background : #F0F0F0 ; 
 }
 #RightSection #CartBox #cartDetails #totalQuantity{
-	height : 30px  ;
-	margin : 4px 0px ;
+	height : 25px  ;
 	padding : 0px 16px ;
 }
 #RightSection #CartBox #cartDetails #netTotal{
-	height : 30px  ;
-	margin : 4px 0px ;
+	height : 24px  ;
 	padding : 0px 16px ;
 }
 #RightSection #CartBox #cartDetails #grandTotal{
@@ -427,10 +424,10 @@ input:focus{
 #RightSection #CartBox #checkoutBtn{
 
 	width   : calc(100% - 32px)  ;
-	margin  : 8px 16px 16px 16px ;
+	margin  : 0px 16px 0px 16px ;
 	
 	color   : #FFFFFF  ;
-	font-size: x-large;
+	font-size: larger;
 	font-weight: 600;
 	
 	background : #ac6500 ;
