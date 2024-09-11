@@ -210,7 +210,8 @@ function renderItemDetailsCart(item){
 	//creation
 	const itemDetailsHeader = document.getElementById("itemDetailsHeader");
 	itemDetailsHeader.innerHTML = "";
-	const image = document.createElement("img");
+	let image ;
+
 	const name_price = document.createElement("div");
 	const name  = document.createElement("div");
 	const price = document.createElement("div");
@@ -232,13 +233,24 @@ function renderItemDetailsCart(item){
 	const priceListRate = document.createElement("div");
 
 	//populate
-	image.src = item.image;
+
+	if(item.image){
+		image = document.createElement("img");
+		image.classList.add("detailsItem_image") ;
+		image.src = item.image;
+	}
+	else{
+		image = document.createElement("div");
+		image.classList.add("detailsItem_image" , "rowBox" , "centerItem");
+		image.textContent = item.item_name[0];
+		image.style.fontSize = "xx-large";
+		image.style.fontWeight = "700";
+	}
+
 	name.textContent = item.item_name;
 	price.textContent = getItemPrice(item) + " DA";
 
 
-	//image
-	image.classList.add("detailsItem_image") ;
 
 	//name
 	name.classList.add("rowBox" , "align_center");
@@ -251,6 +263,7 @@ function renderItemDetailsCart(item){
 	name_price.classList.add("columnBox");
 	name_price.appendChild(name);
 	name_price.appendChild(price);
+
 
 	itemDetailsHeader.appendChild(image);
 	itemDetailsHeader.appendChild(name_price);
