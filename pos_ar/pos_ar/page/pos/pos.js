@@ -193,8 +193,8 @@ function setSelectedItem(){
 		//item
 		itemElement.classList.add("rowBox" , "align_center" , "row_sbtw" , "ItemElement");
 		itemElement.addEventListener("click" , function(event){
-			renderItemDetailsCart(item);
 			hideSelectorCart();
+			renderItemDetailsCart(item);
 		})
 
 		selectedItemsContainer.appendChild(itemElement);
@@ -207,13 +207,26 @@ function setSelectedItem(){
 function renderItemDetailsCart(item){
 	showItemDetails()
 
+	//creation
 	const itemDetailsHeader = document.getElementById("itemDetailsHeader");
 	itemDetailsHeader.innerHTML = "";
 	const image = document.createElement("img");
+	const name_price = document.createElement("div");
+	const name  = document.createElement("div");
+	const price = document.createElement("div");
 
-	image.src = item.image
+	//populate
+	image.src = item.image;
+	name.textContent = item.item_name;
+	price.textContent = getItemPrice(item);
+
+	//name_price div
+	name_price.classList.add("columnBox");
+	name_price.appendChild(name);
+	name_price.appendChild(price);
 
 	itemDetailsHeader.appendChild(image);
+	itemDetailsHeader.appendChild(name_price);
 
 
 }
