@@ -217,13 +217,13 @@ function renderItemDetailsCart(item){
 	const quantity  = document.getElementById("itemDetailsQuantityInput");
 	const rate      = document.getElementById("itemDetailsRateInput");
 	const discount  = document.getElementById("itemDetailsDiscountInput");
-	const available = document.getElementById("itemDetailsQuantityInput");
+	const available = document.getElementById("itemDetailsAvailableInput");
 
 
-	const uom           = document.getElementById("itemDetailsRateInput");
-	const uom_c_f       = document.getElementById("itemDetailsRateInput");
-	const warehouse     = document.getElementById("itemDetailsDiscountInput");
-	const priceListRate = document.getElementById("itemDetailsAvailableInput");
+	const uom           = document.getElementById("itemDetailsUomInput");
+	const uom_c_f       = document.getElementById("itemDetailsUomConversionFactorInput");
+	const warehouse     = document.getElementById("itemDetailsWarehouseInput");
+	const priceListRate = document.getElementById("itemDetailsPriceListRateInput");
 
 	//populate
 
