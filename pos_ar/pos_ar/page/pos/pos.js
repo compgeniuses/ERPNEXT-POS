@@ -215,18 +215,86 @@ function renderItemDetailsCart(item){
 	const name  = document.createElement("div");
 	const price = document.createElement("div");
 
+
+	const c1    = document.getElementById("itemDetails_C1");
+	const c2    = document.getElementById("itemDetails_C2");
+
+
+	const quantity  = document.createElement("div");
+	const rate      = document.createElement("div");
+	const discount  = document.createElement("div");
+	const available = document.createElement("div");
+
+
+	const uom           = document.createElement("div");
+	const uom_c_f       = document.createElement("div");
+	const warehouse     = document.createElement("div");
+	const priceListRate = document.createElement("div");
+
 	//populate
 	image.src = item.image;
 	name.textContent = item.item_name;
-	price.textContent = getItemPrice(item);
+	price.textContent = getItemPrice(item) + " DA";
+
+
+	//image
+	image.classList.add("detailsItem_image") ;
+
+	//name
+	name.classList.add("rowBox" , "align_center");
+
+	//price
+	price.classList.add("rowBox" , "align_center");
 
 	//name_price div
+	name_price.id = "price_and_name"
 	name_price.classList.add("columnBox");
 	name_price.appendChild(name);
 	name_price.appendChild(price);
 
 	itemDetailsHeader.appendChild(image);
 	itemDetailsHeader.appendChild(name_price);
+
+
+	//quantity
+	quantity.id = "DetailsItem_quantity"
+
+	//rate
+	rate.id = "DetailsItem_rate"
+
+	//discount
+	discount.id = "DetailsItem_discount"
+
+	//available
+	available.id = "DetailsItem_available"
+
+	//c1
+	c1.appendChild(quantity);
+	c1.appendChild(rate);
+	c1.appendChild(discount);
+	c1.appendChild(available);
+
+	//uom
+	uom.id = "DetailsItem_uom"
+
+	//uom_c_f
+	uom_c_f.id = "DetailsItem_uom_c_f"
+
+	//warehouse
+	warehouse.id = "DetailsItem_warehouse"
+
+	//priceListRate
+	priceListRate.id = "DetailsItem_priceListRate"
+
+
+	//c2
+	c2.appendChild(uom);
+	c2.appendChild(uom_c_f);
+	c2.appendChild(warehouse);
+	c2.appendChild(priceListRate);
+
+
+
 
 
 }

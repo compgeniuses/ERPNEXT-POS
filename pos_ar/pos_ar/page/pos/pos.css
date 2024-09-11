@@ -197,6 +197,23 @@ input:focus{
 	padding : 4px 16px 4px 16px ;
 }
 
+#LeftSection #itemDetailsCart #itemDetailsHeader .detailsItem_image{
+	width : 35%;
+	height : auto ;
+}
+#LeftSection #itemDetailsCart #itemDetailsHeader #price_and_name{
+	width : 65%;
+	
+	justify-content : center ;
+}
+
+#LeftSection #itemDetailsCart #itemDetailsHeader #price_and_name div{
+	height : 55px ;
+	margin : 16px ;
+	padding : 0px 16px ;
+	border-radius : 12px ;
+	background : #f0f0f0 ;
+}
 
 /************* right *****************/
 #RightSection #CustomerBox{
