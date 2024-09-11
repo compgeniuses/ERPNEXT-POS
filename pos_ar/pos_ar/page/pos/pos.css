@@ -99,7 +99,7 @@ input:focus{
 
 
 #MainContainer{
-	height : 95vh ;
+	height : 100vh ;
 	width  : 100% ;
 }
 
@@ -173,13 +173,15 @@ input:focus{
 
 #LeftSection #SelectorBox #itemsContainer .itemBox {
 	height     : 150px ;
-	width      : 160px ;
-	padding    : 4px   ;
-	margin     : 5px 6px  ;
-	border     : 2px solid #a0a0a0 ;
-	border-radius : 12px ;
-	background : #FFFFFF ;
+	width      : 120px ;
+	margin     : 3px ;
+	position   : relative ; 
 
+	cursor: pointer;
+	background : #FFFFFF ;
+	border     : 1px solid #e0e0e0;
+	border-radius : 6px;
+	overflow : hidden ;
 }
 
 #LeftSection #SelectorBox #itemsContainer .itemBox:hover {
@@ -188,15 +190,31 @@ input:focus{
 }
 
 #LeftSection #SelectorBox #itemsContainer .itemBox .itemImage{
-	width  : calc(100% - 10px);
-	height : 75%  ;
-	margin : 10px 5px ;
-	background : #e0e0e0 ;
+	width  : 100%;
+	height : 120px  ;
+	margin : 0px 0px 5px 0px ;
+	background : #f0f0f0 ;
 	border        : none ;
 	outline       : none ; 
-	border-radius : 12px ;
+}
+#LeftSection #SelectorBox #itemsContainer .itemBox .itemTitle{
+	padding : 0px 0px 0px 5px ;
+	text-overflow: ellipsis;	
+	white-space  : nowrap  ;
+	overflow     : hidden  ;
+	
 }
 
+#LeftSection #SelectorBox #itemsContainer .itemBox .itemPrice{
+	padding : 0px 4px ;
+	background : #ac6500 ;
+	color      : white    ;
+	position   : absolute ; 
+	top        : 0px      ;
+	right      : 0px      ;
+
+	border-radius : 0px 0px 0px 6px ;
+}
 
 /* item details cart */
 #LeftSection #itemDetailsCart{
@@ -225,6 +243,7 @@ input:focus{
 
 	overflow : hidden ;
 }
+
 #LeftSection #itemDetailsCart #itemDetailsHeader #detailsItemImage img{
 	width : 100%;
 	height : 100% ;
@@ -446,7 +465,7 @@ input:focus{
 #RightSection #editSelectedItemCart{
 	width  : 100% ; 
 	height : calc(100% - 55px) ;
-	margin-top : 5px    ;
+	margin : 5px 16px    ;
 	padding    : 0px 0px 16px 0px ;
 
 	animation : mymove 2s  ;
@@ -455,7 +474,6 @@ input:focus{
 	border-radius : 16px;
 	overFlow-y    : scroll; 	
 
-	flex-grow     : 1;	
 	display       : none ;
 
 }

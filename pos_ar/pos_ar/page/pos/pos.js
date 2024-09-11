@@ -124,10 +124,17 @@ function setItemInFlow(filtered_item_list){
 			itemBox.appendChild(itemImageHolder);
 		}
 
-		const itemName = document.createElement("h5");
+		const itemName = document.createElement("div");
 		itemName.textContent = item.name ;
 		itemName.classList.add("itemTitle");
 		itemBox.appendChild(itemName);
+
+
+		const price = document.createElement("div");
+		price.classList.add("itemPrice");
+		price.textContent = getItemPrice(item.name);
+		itemBox.appendChild(price);
+
 
 		itemsContainer_html.appendChild(itemBox);
 	});
@@ -157,7 +164,7 @@ function setSelectedItem(){
 			leftGroup.appendChild(itemImage);
 		}else{
 			const itemImageHolder = document.createElement("div");
-			const itemImageLatter = document.createElement("h4");
+			const itemImageLatter = document.createElement("div");
 
 			itemImageHolder.classList.add("selectedItemImage" , "rowBox" , "centerItem");
 
@@ -316,17 +323,16 @@ function showSelectorCart(){
 	const selectorBox = document.getElementById("SelectorBox");
 	selectorBox.style.display = "block";
 
-	const CartBox = document.getElementById("CartBox");
-	CartBox.style.display = "flex";
-
+	const cartDetails = document.getElementById("cartDetails");
+	cartDetails.style.display = "flex";
 }
 
 function hideSelectorCart(){
 	const selectorBox = document.getElementById("SelectorBox");
 	selectorBox.style.display = "none";
 
-	const CartBox = document.getElementById("CartBox");
-	CartBox.style.display = "none";
+	const cartDetails = document.getElementById("cartDetails");
+	cartDetails.style.display = "none";
 
 }
 
