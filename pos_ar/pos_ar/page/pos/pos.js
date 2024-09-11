@@ -292,6 +292,10 @@ function showItemDetails(){
 	const itemDetailsCart = document.getElementById("itemDetailsCart");
 	itemDetailsCart.style.display = "block";
 
+
+	const editSelectedItemCart = document.getElementById("editSelectedItemCart");
+	editSelectedItemCart.style.display = "block";
+
 	document.getElementById("itemDetailsCartXBtn").addEventListener('click', function(event){
 		hideItemDetails();
 		showSelectorCart();
@@ -301,17 +305,29 @@ function showItemDetails(){
 function hideItemDetails(){
 	const itemDetailsCart = document.getElementById("itemDetailsCart");
 	itemDetailsCart.style.display = "none";
+
+	const editSelectedItemCart = document.getElementById("editSelectedItemCart");
+	editSelectedItemCart.style.display = "none";
+
 }
 
 //selectors cart
 function showSelectorCart(){
 	const selectorBox = document.getElementById("SelectorBox");
 	selectorBox.style.display = "block";
+
+	const CartBox = document.getElementById("CartBox");
+	CartBox.style.display = "flex";
+
 }
 
 function hideSelectorCart(){
 	const selectorBox = document.getElementById("SelectorBox");
 	selectorBox.style.display = "none";
+
+	const CartBox = document.getElementById("CartBox");
+	CartBox.style.display = "none";
+
 }
 
 

@@ -7,6 +7,11 @@
 }
 
 /*hide the top bar of the page*/
+.sticky-top{
+	display : none ;
+}
+
+/*hide the top bar of the page*/
 .page-head{
 	display : none;
 }
@@ -40,7 +45,7 @@
 }
 
 .C_A_Center{
-	align-items    : center ; 
+editSelectedItemCart	align-items    : center ; 
 }
 
 
@@ -52,9 +57,13 @@
 
 
 input{
-	padding       : 0px 12px ;
-	border        : none     ;
-	background    : #eaeaea  ;
+	height        : 25px     ;
+	padding       : 0px 8px  ;
+
+	font-size     : smaller  ;
+
+	background    : #f0f0f0  ;
+	border        : 2px solid #e0e0e0 ;
 	border-radius : 10px     ;
 
 }
@@ -90,7 +99,7 @@ input:focus{
 
 
 #MainContainer{
-	height : 80vh ;
+	height : 95vh ;
 	width  : 100% ;
 }
 
@@ -139,8 +148,8 @@ input:focus{
 
 /*header*/
 #LeftSection #SelectorBox .header{
-	height         : 55px          ;
-	padding        : 8px 16px      ;
+	height         : 45px          ;
+	padding        : 0px 16px      ;
 	justify-content: space-between ;
 }
 
@@ -272,10 +281,9 @@ input:focus{
 }
 /************* right *****************/
 #RightSection #CustomerBox{
-	height : 55px  ;
+	height : 45px  ;
 	width  : 100%  ; 
 	margin-bottom   : 5px    ;
-	padding : 8px 0px ;
 
 
 	animation : mymove 1.5s  ;
@@ -307,27 +315,25 @@ input:focus{
 
 	border        : 2px solid #c0c0c0 ;
 	border-radius : 16px;
-	overFlow      : hidden; 	
+	overFlow-y    : scroll; 	
 
 	flex-grow     : 1;	
 }
 
 #RightSection #CartBox #CartBoxTopBar{
 	width   : 100%;
-	padding : 8px 16px ;
+	padding : 0px 16px ;
 }
 
-#RightSection #CartBox #CartBoxTopBar #PlriceListInput{
-	height  : 30px ; 
-}
 
 /*** items container***/
 
 
 #RightSection #CartBox #cartHeader{
 	width   : calc(100% - 32px)  ;
-	height  : 45px     ;
-	margin  : 4px 16px ;
+	height  : 40px     ;
+	margin  : 0px 16px ;
+	padding : 6px 0px 0px 0px ;
 }
 
 #RightSection #CartBox #cartHeader #quantityTitle{
@@ -335,8 +341,9 @@ input:focus{
 }
 
 #RightSection #CartBox #selectedItemsContainer{	
-	flex-grow : 1     ;
-	overflow-y: scroll;
+	min-height : 70px ;
+	flex-grow  : 1     ;
+	overflow-y : scroll;
 }
 
 /* element  */
@@ -344,24 +351,25 @@ input:focus{
 	width   : calc(100% - 32px)  ;
 	height  : 60px     ;
 	min-height : 60px  ;
-	margin  : 4px 16px ;
-	padding : 5px      ;
+	margin  : 0px 16px ;
+	padding : 4px      ;
 
 	/*animation : mymove 1s */
 
-	border : 2px solid #707070 ;
-	border-radius : 12px  ; 
 }
 
 
 #RightSection #CartBox .ItemElement:hover{
-	border     : 3px solid #a0a0a0 ;
 	background : #F0F0F0 ;
+
+	border     : 3px solid #e0e0e0 ;
+	border-radius : 12px  ; 
+
 }
 
 #RightSection #CartBox .ItemElement .selectedItemImage{
-	width      : 50px ;
-	height     : 50px ;
+	width      : 45px ;
+	height     : 45px ;
 	margin     : 0px 16px 0px 5px  ;
 	background : #e0e0e0 ;	
 	border-radius : 12px ;
@@ -416,7 +424,7 @@ input:focus{
 	font-size : large ;
 }
 
-#checkoutBtn{
+#RightSection #CartBox #checkoutBtn{
 
 	width   : calc(100% - 32px)  ;
 	margin  : 8px 16px 16px 16px ;
@@ -430,7 +438,27 @@ input:focus{
 	border-radius : 8px  ;
 	outline : none ;
 }
-#checkoutBtn:hover{
+#RightSection #CartBox #checkoutBtn:hover{
 	border  : 4px solid #6a3e00;
 	font-weight: 700;
+}
+
+
+
+
+#RightSection #editSelectedItemCart{
+	width  : 100% ; 
+	height : calc(100% - 55px) ;
+	margin-top : 5px    ;
+	padding    : 0px 0px 16px 0px ;
+
+	animation : mymove 2s  ;
+
+	border        : 2px solid #c0c0c0 ;
+	border-radius : 16px;
+	overFlow-y    : scroll; 	
+
+	flex-grow     : 1;	
+	display       : none ;
+
 }
