@@ -271,15 +271,43 @@ function renderItemDetailsCart(item){
 
 	//quantity
 	quantity.id = "DetailsItem_quantity"
+	quantity.classList.add("columnBox")
+	const quantityLabel = document.createElement("label");
+	quantityLabel.innerText = "quantity";
+	const quantityInput = document.createElement("input");
+	quantityInput.type = "Float"
+	quantity.appendChild(quantityLabel);
+	quantity.appendChild(quantityInput);
 
 	//rate
 	rate.id = "DetailsItem_rate"
+	const rateLabel = document.createElement("label");
+	rate.classList.add("columnBox")
+	rateLabel.innerText = "Rate";
+	const rateInput = document.createElement("input");
+	rateInput.type = "Float"
+	rate.appendChild(rateLabel);
+	rate.appendChild(rateInput);
 
 	//discount
 	discount.id = "DetailsItem_discount"
+	discount.classList.add("columnBox")
+	const discountLabel = document.createElement("label");
+	discountLabel.innerText = "discount";
+	const discountInput = document.createElement("input");
+	discountInput.type = "Float"
+	discount.appendChild(discountLabel);
+	discount.appendChild(discountInput);
 
 	//available
 	available.id = "DetailsItem_available"
+	available.classList.add("columnBox")
+	const availableLabel = document.createElement("label");
+	availableLabel.innerText = "available";
+	const availableInput = document.createElement("input");
+	availableInput.type = "Float"
+	available.appendChild(availableLabel);
+	available.appendChild(availableInput);
 
 	//c1
 	c1.appendChild(quantity);
