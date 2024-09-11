@@ -17,7 +17,7 @@ The custom POS page comes pre-installed when you install the app, requiring no m
 |Get All Item (Filtred) | ![screen3](https://github.com/user-attachments/assets/d0d72e4f-b6c2-4ed2-8b6d-1614ab9d8a68)|
 |Selecting customer     | ![screen4](https://github.com/user-attachments/assets/43698fd7-1f24-44d8-a3d2-77e148b2a9e9)|
 |Click on Item to sell  | ![screen5](https://github.com/user-attachments/assets/c964b503-b4be-4786-9829-fc1b7aa27db0)|
-|Item Details Cart      | ![screen6](https://github.com/user-attachments/assets/34fa5a41-9cb5-41c6-9ecd-92925f5672ea)|
+|Item Details Cart      | ![screen6](https://github.com/user-attachments/assets/88e205c2-a9d8-4164-88b9-683c8d870aaa)|
 
 
 
