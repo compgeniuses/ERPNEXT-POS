@@ -16,7 +16,9 @@ let itemGroupList    = []
 let itemList         = []
 let itemPrices       = []
 let priceLists       = []
-let selectedItemMap = new Map();
+let selectedItemMap  = new Map();
+let warehouseList    = []
+let PosProfileList   = []
 
 async function main(){
 
@@ -25,12 +27,16 @@ async function main(){
 	itemList      = await fetchItems()
 	itemPrices    = await fetchItemPrice()
 	priceLists    = await fetchPriceList()
+	warehouseList = await fetchWarehouseList()
+	POSProfileList = await fetchPosProfileList()
 
 	console.log("customersList : " , customersList )
 	console.log("itemGroupList : " , itemGroupList )
-	console.log("itemList : "      , itemList )
-	console.log("itemPrices : "    , itemPrices )
-	console.log("priceLists : "    , priceLists )
+	console.log("itemList : "      , itemList      )
+	console.log("itemPrices : "    , itemPrices    )
+	console.log("priceLists : "    , priceLists    )
+	console.log("warehouseList : " , warehouseList )
+	console.log("POSProfileList : ", PosProfileList )
 
 
 	setCustomersInList();
@@ -282,7 +288,7 @@ function renderItemDetailsCart(item){
 	uom_c_f.value = 1
 
 	//warehouse
-	warehouse.value = "Stores - Ms"
+	warehouse.value = POSProfileList[0].warehouse
 
 	//priceListRate
 	priceListRate.value = 250.00 + "DA"
@@ -467,4 +473,31 @@ async function fetchPriceList() {
         console.error('Error fetching Item Group :', error);
 	return []
     }
+}
+
+
+async function fetchWarehouseList(){
+	try{
+		return await frappe.db.get_list('Warehouse' , {
+			fields  : ['name' , 'warehouse_name'],
+			filters : {}
+		})
+	}
+	catch(error){
+		console.error('Error fetching Warehouse list : ' , error)
+		return [];
+	}
+}
+
+async function fetchPosProfileList(){
+        try{
+                return await frappe.db.get_list('POS Profile' , {
+                        fields  : ['name' , 'warehouse'],
+                        filters : {}
+                })
+        }
+        catch(error){
+                console.error('Error fetching Warehouse list : ' , error)
+                return [];
+        }
 }

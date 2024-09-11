@@ -11,7 +11,7 @@
                     <input type="text" autocomplete="off"  maxlength="140" placeholder="Search by item code, serial number or barcode" id="ItemInput" name="item" placeHolder="Enter the customer">
                     <input list="ItemGroupList"  id="ItemGroupInput" name="ItemGroup" placeHolder="Item Group">
                     <datalist id="ItemGroupList">
-                        <option>Item Group 1</option>
+                        <option>fetching Item Groups ...</option>
 		    </datalist>
                 </div>
             </div>
@@ -61,7 +61,10 @@
                     </div>
                     <div class="columnBox">
                         <label for="itemDetailsWarehouseInput">Warehouse *</label>
-                        <input type="text" id="itemDetailsWarehouseInput">
+                        <input list="warehouseList" id="warehouseListInput">
+                        <datalist id="warehouseList">
+                            <option>fetching warehouse ...</option>
+                        </datalist>
                     </div>
                     <div class="columnBox">
                         <label for="itemDetailsPriceListRateInput">Price List Rate</label>
