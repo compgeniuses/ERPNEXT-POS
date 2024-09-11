@@ -450,9 +450,9 @@ input:focus{
 }
 
 #RightSection #CartBox #checkoutBtn{
-
 	width   : calc(100% - 32px)  ;
-	margin  : 0px 16px 0px 16px ;
+	margin  : 0px 16px 0px 16px  ;
+	padding : 8px 0px ;
 	
 	color   : #FFFFFF  ;
 	font-size: larger;
@@ -488,15 +488,28 @@ input:focus{
 
 /*grid*/
 .grid-container {
-  display: grid;
-  background-color: #2196F3;
-  padding: 2px;
+	padding: 2px;
+
+	display: grid;
+	grid-template-columns : auto auto auto auto ;
+
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 4px;
-  font-size: smalle;
-  text-align: center;
+	height          : 45px ;
+	padding         : 4px  ;
+	margin          : 6px  ;
+
+	background      : #f5f5f5;
+	border          : 2px solid #e0e0e0;
+	border-radius   : 12px  ;
+	font-size       : small ;
+	text-align      : center;
+
+	display         : flex  ;
+	justify-content : center;
+	align-items     : center;
 } 
 
+.grid-item:hover {
+	background      : #e0e0e0;
+}
