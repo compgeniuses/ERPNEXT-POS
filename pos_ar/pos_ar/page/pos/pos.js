@@ -41,8 +41,7 @@ async function main(){
 
 	setCustomersInList();
 	setItemGroupsInList();
-
-
+        setWarehouseList();
 
 	//set listener
 	document.getElementById("ItemGroupInput").addEventListener('input' , function(event){
@@ -90,6 +89,20 @@ function setItemGroupsInList(){
 		groupItemList_html.appendChild(option);
 	})
 
+}
+
+
+function setWarehouseList(){
+
+	const warehouseList_html = document.getElementById("warehouseList");
+	warehouseList_html.innerHTML = "" ;
+
+	warehouseList.forEach(warehouse =>{
+		const option = document.createElement("option");
+		option.value = warehouse.name;
+		option.textContent = warehouse.warehouse_name;
+		warehouseList_html.appendChild(option);
+	})
 }
 
 
