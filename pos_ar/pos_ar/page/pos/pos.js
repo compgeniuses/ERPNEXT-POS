@@ -132,7 +132,7 @@ function setItemInFlow(filtered_item_list){
 
 		const price = document.createElement("div");
 		price.classList.add("itemPrice");
-		price.textContent = getItemPrice(item.name);
+		price.textContent = getItemPrice(item.name) + " DA";
 		itemBox.appendChild(price);
 
 
@@ -169,7 +169,6 @@ function setSelectedItem(){
 			itemImageHolder.classList.add("selectedItemImage" , "rowBox" , "centerItem");
 
 			itemImageLatter.textContent = item.name[0]
-			itemImageLatter.style.padding = "10px 0px 0px 0px"
 			itemImageHolder.appendChild(itemImageLatter);
 			leftGroup.appendChild(itemImageHolder);
 		}
